@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+	<node name="moveit_ik_test" pkg="test_planning" type="moveit_ik_test.py" launch-prefix="xterm -e" output="screen"/>
+
+	<node name="testForinput" pkg="test_planning" type="testForinput.py"/>  
+        
+</launch>

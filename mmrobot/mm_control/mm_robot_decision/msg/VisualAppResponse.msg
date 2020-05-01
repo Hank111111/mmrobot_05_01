@@ -1,0 +1,10 @@
+string object_name
+int32 object_unique_id_on_equipment
+string frame_id
+pose4 pose
+float64 width
+float64 height
+int8[] object_status
+float64[] additional_numerical_info
+string additional_text_info
+bool success

@@ -1,0 +1,4 @@
+string object_name
+int32 object_unique_id_on_equipment
+int32 equipment_id
+int32 equipment_type

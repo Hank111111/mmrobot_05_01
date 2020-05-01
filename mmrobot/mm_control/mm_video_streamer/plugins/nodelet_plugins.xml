@@ -1,0 +1,7 @@
+<library path="lib/libstreamer_nodelet">
+  <class name="streamer_pkg/StreamerNodelet" type="streamer_pkg::StreamerNodelet" base_class_type="nodelet::Nodelet">
+    <description>
+      Nodelet for video streaming.
+    </description>
+  </class>
+</library>

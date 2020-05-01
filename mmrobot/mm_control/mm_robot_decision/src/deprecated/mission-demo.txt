@@ -1,0 +1,13 @@
+moveToEquipment,(3.5 4.5 5.5),(ax ay az w),(theta1 theta2 theta3 theta4 theta5 theta6),1003#,
+checkMeter,(theta1 theta2 theta3 theta4 theta5 theta6),A,0,V,0,
+checkSwitchStatus,(theta1 theta2 theta3 theta4 theta5 theta6),S2,0,S3,0,
+checkRemoteStatus,(theta1 theta2 theta3 theta4 theta5 theta6),S1,0,
+operateRemoteSwitch,(theta1 theta2 theta3 theta4 theta5 theta6),open,
+operateHandcartSwitch,(theta1 theta2 theta3 theta4 theta5 theta6),TestToWork,
+checkSwitchStatus,(theta1 theta2 theta3 theta4 theta5 theta6),S2,0,S3,1,
+operateKnifeSwitch,(theta1,theta2,theta3,theta4,theta5,theta6),open,
+checkSwitchStatus,(theta1 theta2 theta3 theta4 theta5 theta6),S2,1,S3,1,
+checkMeter,(theta1 theta2 theta3 theta4 theta5 theta6),A,1,V,1,
+operateRemoteStatus,(theta1 theta2 theta3 theta4 theta5 theta6),close,
+checkRemoteStatus,(theta1 theta2 theta3 theta4 theta5 theta6),S1,0,
+finishSingleEquipmentOperate£¬

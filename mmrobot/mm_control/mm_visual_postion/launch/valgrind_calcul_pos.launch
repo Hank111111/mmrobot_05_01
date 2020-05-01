@@ -1,0 +1,3 @@
+<launch>
+  <node name="calcuPose" pkg="mm_visual_postion" type="calcuPose" launch-prefix="valgrind"/>
+</launch>

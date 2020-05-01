@@ -1,0 +1,6 @@
+# input
+sensor_msgs/Image image_message
+---
+#output
+string[] ocr
+

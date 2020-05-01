@@ -1,0 +1,49 @@
+-1.打开rmtpserver，sudo /usr/local/nginx/sbin/nginx
+0.单独开一个roscore
+1.相机节点：保证先开 rosrun mm_video_streamer streamer_camera_node
+2.控制节点： roslaunch mm_robot_decision mm_decision.launch
+3.视觉节点（示教模式）： roslaunch mm_visual_postion visual_wrapper_and_apps_teach.launch
+4.示教模式下指令：
+首先，确认数据库中有该柜子信息，将二维码内容写入数据库 additional text info
+否则，import，在Teachscript.py中    def copyToEquipment(self, src_equipment_id, src_type_id, dst_equipment_id, qr_code_type_id):  使用ipython2
+In [1]: import TeachScript
+
+In [2]: aa=TeachScript.TeachProcess()
+[INFO] [1561535901.478303]: started
+
+In [4]: aa.current_equipment_type_id = 1
+
+In [5]: aa.current_equipment_id = 5 -----已有柜子做源
+
+In [6]: aa.copyToEquipment(5,1,8,5)
+
+
+
+
+
+接着refine
+rostopic pub -1 /mm_visual/wrapper/refine_cabinet mm_robot_decision/VisualAppRequest
+----示教二维码、灯、开关。二维码无先后顺序，分别写，只有灯需要手动框，其他auto
+用rqt中的visulization topic检查roi
+接着设置offset
+
+rostopic pub -1 /mm_visual/wrapper/get_pose_without_offset mm_robot_decision/VisualAppRequest----移动到位，准备示教，要求二维码已定位或直接写入未移动车情况下上次的二维码输出矩阵
+
+rostopic pub -1 /mm_visual/wrapper/save_correct_offset mm_robot_decision/VisualAppRequest 
+----示教插入位置后保存
+
+rostopic pub -1 /mm_visual/wrapper/grab_template mm_visual_postion/AppInnerRequest 
+----拍摄模板（远方就地），需在开启视角节点前删除原模板
+
+mm_visual/wrapper/grab_data",1,&VisualSafeWrapper::grabDataCallback
+----获取所需roi,采集数据
+
+5.中途如手动修改数据库，需rostopic pub -1 /mm_visual/wrapper/re_read_database mm_robot_decision/VisualAppRequest，内容为空
+
+
+6.示教完成后换用roslaunch mm_visual_postion visual_wrapper_and_apps.launch
+
+
+
+
+

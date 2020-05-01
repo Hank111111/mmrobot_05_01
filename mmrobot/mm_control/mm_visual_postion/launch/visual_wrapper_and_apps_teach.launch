@@ -1,0 +1,20 @@
+<launch>
+  <node name="visual_wrapper" pkg="mm_visual_postion" type="VisualSafeWrapperTeachNode" output="screen" >
+  </node>
+
+
+  <node name="visual_app_light" pkg="mm_pattern_recognition" type="mm_light.py" output="screen" >
+  </node>
+
+  <node name="visual_app_pointmeter" pkg="mm_visual_postion" type="MeterRecognizerNode" output="screen" >
+  </node>
+
+  <node name="visual_app_switch" pkg="mm_visual_postion" type="RectSwitchFinderNode" output="screen" >
+  </node>
+  <node name="visual_app_HandTrunk" pkg="mm_visual_postion" type="HandTrunkSolverNode" output="screen" >
+  </node>
+  <node pkg="mm_visual_postion" type="qr_id.py" name="mm_visual_qr" output="screen"/>
+  <node pkg="mm_visual_postion" type="digitalMeterNode" name="mm_visual_digitalmeter" output="screen"/>
+  <node name="visual_remote_switch_recognizer" pkg="mm_pattern_recognition" type="mm_remote_switch.py" output="screen" />
+
+</launch>

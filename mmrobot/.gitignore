@@ -1,0 +1,11 @@
+*.bmp
+.vscode/*
+**/.vscode/*
+*.pyc
+*.jpg
+*.png
+*/__pycache__/*
+mm_control/mm_pattern_recognition/src/text-detection-ctpn/checkpoints_mlt/
+mm_control/mm_pattern_recognition/src/text-detection-ctpn/crnn/samples/
+mm_control/mm_visual_postion/dataset/*
+*.tar.gz

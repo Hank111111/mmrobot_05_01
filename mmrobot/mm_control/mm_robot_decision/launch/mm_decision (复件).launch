@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<launch>
+       
+
+       <node pkg="mm_mobile_control" type="mm_trans.py" name="mm_trans" output="screen"/>  
+ 
+       <node pkg="mm_arm_control" type="moveit_ik_test.py" name="mm_arm" output="screen"/>  
+
+       <node pkg="mm_visual_postion" type="calcuPose" name="mm_visual_position" output="screen"/> 
+	
+       <node pkg="mm_endmotor_control" type="serial_port" name="mm_endmotor" output="screen"/>  
+      
+       <node pkg="mm_robot_decision" type="mm_decision.py" name="mm_decision" output="screen" />
+
+	<node pkg="mm_visual_postion" type="light" name="light11" output="screen" />
+
+</launch>

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<robot 
+  name="tool_camera">
+
+  <link
+    name="tool_base_link">
+    <inertial>
+      <origin
+        xyz="0.089082 -6.8669E-06 -0.005707"
+        rpy="0 0 0" />
+      <mass
+        value="0.48825" />
+      <inertia
+        ixx="0.00030597"
+        ixy="1.8672E-07"
+        ixz="1.017E-05"
+        iyy="0.0021846"
+        iyz="-2.132E-08"
+        izz="0.0021122" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur_description/meshes/tool_camera/tool_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur_description/meshes/tool_camera/tool_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="tool_camera_link">
+    <inertial>
+      <origin
+        xyz="-1.3878E-17 0.015013 0.015594"
+        rpy="0 0 0" />
+      <mass
+        value="0.1566" />
+      <inertia
+        ixx="2.4411E-05"
+        ixy="-3.8372E-22"
+        ixz="4.0067E-21"
+        iyy="0.00038308"
+        iyz="-2.256E-09"
+        izz="0.00038168" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur_description/meshes/tool_camera/camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur_description/meshes/tool_camera/camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_set_joint"
+    type="fixed">
+    <origin
+      xyz="0.10465 0.079 0"
+      rpy="0 1.5708 0" />
+    <parent
+      link="tool_base_link" />
+    <child
+      link="tool_camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

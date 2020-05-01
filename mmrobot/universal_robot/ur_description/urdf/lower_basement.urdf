@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot
+  name="lower_basement">
+  <link
+    name="lower_base_link">
+    <inertial>
+      <origin
+        xyz="-0.00027939 0.0051002 -0.017579"
+        rpy="0 0 0" />
+      <mass
+        value="28.379" />
+      <inertia
+        ixx="2.981"
+        ixy="-0.0038509"
+        ixz="-0.00098344"
+        iyy="2.1914"
+        iyz="-0.041119"
+        izz="3.3081" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur_description/meshes/basement/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur_description/meshes/basement/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

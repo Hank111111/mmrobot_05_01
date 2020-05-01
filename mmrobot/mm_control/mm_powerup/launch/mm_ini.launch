@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+
+       <node pkg="mm_powerup" type="serial_switch" name="mm_switch" output="screen" respawn="true"/>
+
+       <node pkg="mm_powerup" type="mm_initial.py" name="ini_node" output="screen" />
+
+</launch>

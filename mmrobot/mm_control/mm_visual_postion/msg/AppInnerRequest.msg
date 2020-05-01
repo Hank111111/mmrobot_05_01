@@ -1,0 +1,10 @@
+string object_name
+int32 object_unique_id_on_equipment
+string frame_id
+ROI left_roi
+ROI right_roi
+float32 object_width
+float32 object_height
+float32[] additional_numerical_info
+string additional_text_info
+geometry_msgs/Transform transform_base_to_obj

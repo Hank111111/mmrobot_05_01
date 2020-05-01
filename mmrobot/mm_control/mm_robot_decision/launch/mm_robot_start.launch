@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<launch>
+       <include file="$(find youi_navigation)/launch/robot_navigation.launch" />
+       <include file="$(find mm_arm_control)/launch/ur10_test_run.launch" />
+</launch>

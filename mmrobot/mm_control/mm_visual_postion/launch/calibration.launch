@@ -1,0 +1,8 @@
+<launch>
+  <node name="calibration" pkg="camera_calibration" type="cameracalibrator.py"   output="screen"
+            args="--approximate 0.1 --size 9x12 --square 10 --no-service-check">
+     <remap from="right" to="/zed/right/image_raw_color"/>
+     <remap from="left" to="/zed/left/image_raw_color"/>
+
+    </node>
+</launch>

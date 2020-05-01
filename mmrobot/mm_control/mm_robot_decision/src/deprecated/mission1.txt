@@ -1,0 +1,2 @@
+moveToEquipment,(5.04 0.98 0.0),(0.0 0.0 0.0 1.0),
+moveToEquipment,(0.90 0.00 0.0),(0.0 0.0 0.0 1.0),success

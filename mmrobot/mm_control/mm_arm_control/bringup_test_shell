@@ -1,0 +1,14 @@
+#!/bin/bash
+
+roslaunch ur_gazebo ur10.launch &
+sleep 10
+     
+roslaunch ur10_moveit_config ur10_moveit_planning_execution.launch sim:=true &
+sleep 5
+
+roslaunch test_planning simple_bringup.launch 
+sleep 1
+
+wait
+
+exit 0

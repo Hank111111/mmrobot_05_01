@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <include file="$(find ur_modern_driver)/launch/ur10_bringup.launch">
+    <arg name="robot_ip" value="192.168.0.11"/>
+    <arg name="limited"  value="false"/>
+  </include>
+
+  <!--include file="$(find ur10_moveit_config)/launch/moveit_execute.launch"/-->
+
+</launch>

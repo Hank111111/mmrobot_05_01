@@ -1,0 +1,5 @@
+# input
+sensor_msgs/Image image_message
+---
+#output
+int8[] status

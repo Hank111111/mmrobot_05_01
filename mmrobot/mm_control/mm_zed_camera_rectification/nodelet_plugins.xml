@@ -1,0 +1,7 @@
+<library path="lib/libmm_zed_camera_rectification">
+  <class name="mm_zed_camera_rectification/CameraRectificationNodelet" type="mm_zed_camera_rectification::CameraRectificationNodelet" base_class_type="nodelet::Nodelet">
+  <description>
+  This is my nodelet.
+  </description>
+  </class>
+</library>

@@ -1,0 +1,4 @@
+string equipment_name
+int64 equipment_id
+int64 equipment_type
+geometry_msgs/Pose pose
